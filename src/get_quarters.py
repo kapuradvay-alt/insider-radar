@@ -3,6 +3,13 @@
 Run from the project folder (your email goes in the command, it is not saved anywhere):
     python src/get_quarters.py you@example.com 2022 2025
 
+Add --redo-low at the end to redo the price download and cleaning for any quarter where
+Yahoo gave prices for under 80% of the tickers (the zip and unzipped files are kept):
+    python src/get_quarters.py you@example.com 2022 2025 --redo-low
+
+Add --redo-all instead to redo every quarter in the range with the current cleaning code,
+so that all quarters are made with exactly the same rules.
+
 The SEC asks anyone who downloads automatically to say who they are, so the email is
 sent in the request header. Files that already exist are skipped, so it is safe to run
 again if it stops half way.
@@ -62,6 +69,21 @@ def clean(name):
     return res.returncode == 0
 
 
+def price_coverage(name):
+    """Share of tickers that have Yahoo prices in the saved price file (None if no file)."""
+    f = DATA / f"prices_{name}.csv"
+    if not f.exists():
+        return None
+    px = pd.read_csv(f, index_col=0)
+    return float(px.notna().any().mean())
+
+
+def redo(name):
+    """Delete the cleaning and price outputs of one quarter so they are made again."""
+    for f in [f"purchases_{name}.csv", f"people_{name}.csv", f"funnel_{name}.txt", f"prices_{name}.csv"]:
+        (DATA / f).unlink(missing_ok=True)
+
+
 def merge(names, out_path):
     parts = [pd.read_csv(DATA / f"people_{n}.csv", parse_dates=["trans_date", "filing_date"],
                          dtype={"ISSUERCIK": str, "RPTOWNERCIK": str})
@@ -72,11 +94,25 @@ def merge(names, out_path):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4 or "@" not in sys.argv[1]:
-        sys.exit("Usage: python src/get_quarters.py you@example.com 2022 2025")
-    email, y0, y1 = sys.argv[1], int(sys.argv[2]), int(sys.argv[3])
+    args = sys.argv[1:]
+    redo_low = "--redo-low" in args
+    redo_all = "--redo-all" in args
+    args = [a for a in args if a not in ("--redo-low", "--redo-all")]
+    if len(args) != 3 or "@" not in args[0]:
+        sys.exit("Usage: python src/get_quarters.py you@example.com 2022 2025 [--redo-low | --redo-all]")
+    email, y0, y1 = args[0], int(args[1]), int(args[2])
     DATA.mkdir(exist_ok=True)
     names = [f"{y}q{q}_form345" for y in range(y0, y1 + 1) for q in (1, 2, 3, 4)]
+    if redo_all:
+        for name in names:
+            print(f"{name}: will redo")
+            redo(name)
+    elif redo_low:
+        for name in names:
+            cov = price_coverage(name)
+            if cov is not None and cov < 0.8:
+                print(f"{name}: Yahoo prices for {cov:.0%} of tickers, will redo")
+                redo(name)
     done = []
     for name in names:
         print(name, flush=True)
@@ -87,7 +123,8 @@ if __name__ == "__main__":
         if not clean(name):
             print("  cleaning failed, skipping"); continue
         done.append(name)
-        print("  ok", flush=True)
+        cov = price_coverage(name)
+        print(f"  ok (Yahoo prices for {cov:.0%} of tickers)" if cov is not None else "  ok", flush=True)
     if done:
         out = DATA / f"people_{y0}_{y1}.csv"
         print(f"\n{len(done)} of {len(names)} quarters done. Merged owner-level rows: {merge(done, out)}")

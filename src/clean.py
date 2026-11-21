@@ -65,7 +65,7 @@ def apply_rules(d):
     log.append(("has price and shares above 0", len(step)))
 
     lag = (step["filing_date"] - step["trans_date"]).dt.days
-    step = step[lag <= MAX_LAG_DAYS]
+    step = step[(lag >= 0) & (lag <= MAX_LAG_DAYS)]    # a trade dated after its filing is impossible
     log.append((f"filed within {MAX_LAG_DAYS} days of the trade", len(step)))
 
     step = step[step["DOCUMENT_TYPE"] == "4"]
@@ -73,10 +73,20 @@ def apply_rules(d):
     return step.copy(), pd.DataFrame(log, columns=["step", "rows left"])
 
 
-def download_prices(tickers, start, end, cache_file):
-    """Daily closing prices from Yahoo, saved to cache_file so we never download twice."""
+def _download(batch, start, end):
     import yfinance as yf
+    df = yf.download(batch, start=start, end=end, auto_adjust=False, progress=False)["Close"]
+    if isinstance(df, pd.Series):
+        df = df.to_frame(batch[0])
+    return df
 
+
+def download_prices(tickers, start, end, cache_file):
+    """Daily closing prices from Yahoo, saved to cache_file so we never download twice.
+
+    Yahoo sometimes returns nothing for a ticker without raising an error (for example
+    when it is busy). Tickers that come back empty are retried in smaller batches.
+    """
     cache_file = Path(cache_file)
     if cache_file.exists():
         prices = pd.read_csv(cache_file, index_col=0, parse_dates=True)
@@ -85,16 +95,37 @@ def download_prices(tickers, start, end, cache_file):
     names = sorted({t.replace(".", "-") for t in tickers})   # Yahoo writes BRK.B as BRK-B
     frames = []
     for i in range(0, len(names), 100):
-        batch = names[i:i + 100]
         try:
-            df = yf.download(batch, start=start, end=end, auto_adjust=False, progress=False)["Close"]
-            frames.append(df)
+            frames.append(_download(names[i:i + 100], start, end))
         except Exception as e:
             print("batch failed at", i, e)
         time.sleep(2)
     prices = pd.concat(frames, axis=1)
     prices.index = pd.to_datetime(prices.index).tz_localize(None)
     prices = prices.loc[:, ~prices.columns.duplicated()]
+
+    for attempt in range(2):
+        have = set(prices.columns[prices.notna().any()])
+        missing = [n for n in names if n not in have]
+        if not missing:
+            break
+        print(f"retry {attempt + 1}: {len(missing)} tickers had no prices")
+        time.sleep(10)
+        extra = []
+        for i in range(0, len(missing), 25):
+            try:
+                extra.append(_download(missing[i:i + 25], start, end))
+            except Exception as e:
+                print("retry batch failed at", i, e)
+            time.sleep(3)
+        if extra:
+            new = pd.concat(extra, axis=1)
+            new.index = pd.to_datetime(new.index).tz_localize(None)
+            new = new.loc[:, ~new.columns.duplicated()]
+            prices = prices.combine_first(new)
+
+    have = prices.columns[prices.notna().any()]
+    print(f"price coverage: {len(have)} of {len(names)} tickers have Yahoo prices")
     prices.to_csv(cache_file)
     return prices
 
