@@ -14,7 +14,7 @@ import pandas as pd
 
 def load_people(path):
     return pd.read_csv(path, parse_dates=["trans_date", "filing_date"],
-                       dtype={"ISSUERCIK": str, "RPTOWNERCIK": str})
+                       dtype={"ISSUERCIK": str, "RPTOWNERCIK": str}, low_memory=False)
 
 
 def find_clusters(people, n, window, min_value, cooldown=None, min_trade_dates=1):
