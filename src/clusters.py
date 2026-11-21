@@ -17,30 +17,47 @@ def load_people(path):
                        dtype={"ISSUERCIK": str, "RPTOWNERCIK": str})
 
 
-def find_clusters(people, n, window, min_value):
+def find_clusters(people, n, window, min_value, cooldown=None, min_trade_dates=1):
     """Companies with at least n different executives buying within `window` days.
 
     Counts by filing date. Each insider's purchases filed on the same day are added
-    together and must reach min_value. Returns one row per company: the signal date
-    is the first filing date on which the cluster is complete.
+    together and must reach min_value.
+
+    cooldown=None: one row per company, the first signal only (one file = one quarter).
+    cooldown=90: a company can signal again, but not within 90 days of its last signal.
+    min_trade_dates=2: the purchases in the cluster must fall on at least 2 different
+    trade dates (rule v2 in docs/cluster_rule_v2.md).
+
+    The signal date is the first filing date on which the cluster is complete.
     """
     x = people[people["is_exec"]]
-    g = x.groupby(["ISSUERCIK", "RPTOWNERCIK", "filing_date"], as_index=False)["value"].sum()
+    g = (x.groupby(["ISSUERCIK", "RPTOWNERCIK", "filing_date"])
+          .agg(value=("value", "sum"),
+               tdates=("trans_date", lambda s: frozenset(s.dropna())))
+          .reset_index())
     g = g[g["value"] >= min_value]
     out = []
     for cik, grp in g.groupby("ISSUERCIK"):
         grp = grp.sort_values("filing_date")
         dates = grp["filing_date"].values
         owners = grp["RPTOWNERCIK"].values
+        tdates = grp["tdates"].values
+        last = None
         for i in range(len(grp)):
             end = dates[i]
+            if last is not None and end < last + np.timedelta64(cooldown, "D"):
+                continue
             start = end - np.timedelta64(window, "D")
             mask = (dates <= end) & (dates > start)
-            if len(set(owners[mask])) >= n:
+            insiders = len(set(owners[mask]))
+            trade_dates = len(set().union(*tdates[mask]))
+            if insiders >= n and trade_dates >= min_trade_dates:
                 out.append({"ISSUERCIK": cik, "signal_date": pd.Timestamp(end),
-                            "insiders": len(set(owners[mask]))})
-                break
-    return pd.DataFrame(out, columns=["ISSUERCIK", "signal_date", "insiders"])
+                            "insiders": insiders, "trade_dates": trade_dates})
+                if cooldown is None:
+                    break
+                last = end
+    return pd.DataFrame(out, columns=["ISSUERCIK", "signal_date", "insiders", "trade_dates"])
 
 
 if __name__ == "__main__":
