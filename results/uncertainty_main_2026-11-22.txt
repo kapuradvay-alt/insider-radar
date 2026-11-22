@@ -1,0 +1,14 @@
+MAIN TEST, v1, 3 months, last price, after 1% cost. Signals: 965
+
+Median excess return vs SPY: -2.5%
+  95% range, resampling signals:   [-4.1%, -1.5%]
+  95% range, resampling companies: [-4.1%, -1.5%]
+  95% range, resampling months:    [-5.6%, 0.1%]
+
+Median excess return vs IWM: -1.2%
+  95% range, resampling signals:   [-2.7%, 0.2%]
+  95% range, resampling companies: [-2.6%, 0.2%]
+  95% range, resampling months:    [-4.1%, 1.0%]
+
+3-month stock returns: 25th percentile -11.2%, 75th percentile 17.3%, worst -89.4%, best 688.5%
+Share of signals with a 3-month loss: 45%

@@ -1,0 +1,60 @@
+MAIN TEST (signals before 2025)
+
+=== v1, all signals: 966 signals ===
+
+1 month (21 trading days). Status counts: {'ok': 965, 'no entry price': 1}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    965  1.6%   0.2%        0.6%         -1.0%        46%        1.1%         -0.6%        47%
+last price                 965  1.6%   0.2%        0.6%         -1.0%        46%        1.1%         -0.6%        47%
+-100%                      965  1.6%   0.2%        0.6%         -1.0%        46%        1.1%         -0.6%        47%
+last price, after 1% cost  965  0.6%  -0.8%       -0.4%         -2.0%        42%        0.1%         -1.6%        42%
+
+3 months (primary) (63 trading days). Status counts: {'ok': 965, 'no entry price': 1}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    965  5.7%   2.2%        1.8%         -1.5%        45%        3.1%         -0.2%        50%
+last price                 965  5.7%   2.2%        1.8%         -1.5%        45%        3.1%         -0.2%        50%
+-100%                      965  5.7%   2.2%        1.8%         -1.5%        45%        3.1%         -0.2%        50%
+last price, after 1% cost  965  4.7%   1.2%        0.8%         -2.5%        44%        2.1%         -1.2%        47%
+
+12 months (252 trading days). Status counts: {'ok': 965, 'no entry price': 1}
+                             n   mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    965  19.7%   5.5%        1.6%        -12.9%        36%       10.7%         -3.9%        46%
+last price                 965  19.7%   5.5%        1.6%        -12.9%        36%       10.7%         -3.9%        46%
+-100%                      965  19.7%   5.5%        1.6%        -12.9%        36%       10.7%         -3.9%        46%
+last price, after 1% cost  965  18.7%   4.5%        0.6%        -13.9%        36%        9.7%         -4.9%        44%
+
+=== v1, first signal per company only: 650 signals ===
+
+3 months (primary) (63 trading days). Status counts: {'ok': 649, 'no entry price': 1}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    649  6.1%   2.2%        2.7%         -1.4%        45%        3.6%         -0.8%        48%
+last price                 649  6.1%   2.2%        2.7%         -1.4%        45%        3.6%         -0.8%        48%
+-100%                      649  6.1%   2.2%        2.7%         -1.4%        45%        3.6%         -0.8%        48%
+last price, after 1% cost  649  5.1%   1.2%        1.7%         -2.4%        44%        2.6%         -1.8%        46%
+
+=== v2 (2+ trade dates): 757 signals ===
+
+3 months (primary) (63 trading days). Status counts: {'ok': 756, 'no entry price': 1}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    756  5.2%   2.3%        1.1%         -1.1%        46%        2.3%         -0.2%        49%
+last price                 756  5.2%   2.3%        1.1%         -1.1%        46%        2.3%         -0.2%        49%
+-100%                      756  5.2%   2.3%        1.1%         -1.1%        46%        2.3%         -0.2%        49%
+last price, after 1% cost  756  4.2%   1.3%        0.1%         -2.1%        45%        1.3%         -1.2%        47%
+
+=== v1 signals with all purchases on one trade date: 304 signals ===
+
+3 months (primary) (63 trading days). Status counts: {'ok': 303, 'no entry price': 1}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    303  6.9%   1.3%        3.4%         -2.9%        43%        5.0%         -1.2%        49%
+last price                 303  6.9%   1.3%        3.4%         -2.9%        43%        5.0%         -1.2%        49%
+-100%                      303  6.9%   1.3%        3.4%         -2.9%        43%        5.0%         -1.2%        49%
+last price, after 1% cost  303  5.9%   0.3%        2.4%         -3.9%        41%        4.0%         -2.2%        46%
+
+=== v1 signals with purchases on 2+ trade dates: 662 signals ===
+
+3 months (primary) (63 trading days). Status counts: {'ok': 662}
+                             n  mean median mean ex SPY median ex SPY beat SPY % mean ex IWM median ex IWM beat IWM %
+dropped                    662  5.1%   2.3%        1.0%         -1.1%        47%        2.2%         -0.1%        50%
+last price                 662  5.1%   2.3%        1.0%         -1.1%        47%        2.2%         -0.1%        50%
+-100%                      662  5.1%   2.3%        1.0%         -1.1%        47%        2.2%         -0.1%        50%
+last price, after 1% cost  662  4.1%   1.3%       -0.0%         -2.1%        45%        1.2%         -1.1%        48%
