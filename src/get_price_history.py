@@ -5,8 +5,9 @@ because the cleaning files hold prices for only about 70 days around each trade.
 Run from the project folder:
     python src/get_price_history.py data/signals_2022_2025.csv
 
-Output: data/price_history_adj.csv (one column per ticker). If the file exists it is
-reused. Delete it to download again.
+Output: data/price_history_adj.csv (one column per ticker). If the file exists the script
+stops, unless you add --add: then only the tickers that are not in the file yet are downloaded
+and added to it.
 """
 import sys
 import time
@@ -56,12 +57,21 @@ def fetch_all(names, start, end):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        sys.exit("Usage: python src/get_price_history.py data/signals_2022_2025.csv")
-    if OUT.exists():
-        sys.exit(f"{OUT} already exists. Delete it first if you want to download again.")
-    sig = pd.read_csv(sys.argv[1], parse_dates=["signal_date"])
+    add = "--add" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--add"]
+    if len(args) != 1:
+        sys.exit("Usage: python src/get_price_history.py data/signals_2022_2025.csv [--add]")
+    if OUT.exists() and not add:
+        sys.exit(f"{OUT} already exists. Add --add to download only the missing tickers, "
+                 "or delete the file to download everything again.")
+    sig = pd.read_csv(args[0], parse_dates=["signal_date"])
     names = sorted({t.replace(".", "-") for t in sig["ticker"].dropna()} | set(BENCHMARKS))
+    old = None
+    if OUT.exists():
+        old = pd.read_csv(OUT, index_col=0, parse_dates=True)
+        names = [n for n in names if n not in set(old.columns)]
+        if not names:
+            sys.exit("Nothing to add: every ticker is already in the file.")
     start = sig["signal_date"].min() - pd.Timedelta(days=7)
     end = min(pd.Timestamp.today().normalize() + pd.Timedelta(days=1),
               sig["signal_date"].max() + pd.Timedelta(days=400))
@@ -70,9 +80,13 @@ if __name__ == "__main__":
     px = fetch_all(names, start, end)
     have = px.columns[px.notna().any()]
     print(f"price coverage: {len(have)} of {len(names)} tickers have Yahoo prices")
-    for b in BENCHMARKS:
-        if b not in have:
-            sys.exit(f"No prices for benchmark {b}. Stopping, nothing saved.")
+    if old is None:
+        for b in BENCHMARKS:
+            if b not in have:
+                sys.exit(f"No prices for benchmark {b}. Stopping, nothing saved.")
+    else:
+        px = pd.concat([old, px], axis=1).sort_index()
     px.to_csv(OUT)
-    print("rows (days):", len(px), "| first day:", px.index.min().date(), "| last day:", px.index.max().date())
+    print("columns:", px.shape[1], "| rows (days):", len(px), "| first day:", px.index.min().date(),
+          "| last day:", px.index.max().date())
     print("saved", OUT)

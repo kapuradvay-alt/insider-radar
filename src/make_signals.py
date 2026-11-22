@@ -17,13 +17,13 @@ from clusters import load_people, find_clusters   # noqa: E402
 N, WINDOW, MIN_VALUE, COOLDOWN = 3, 14, 10000, 90
 
 
-def add_ticker(sig, people):
+def add_ticker(sig, people, window=WINDOW):
     """Ticker the company used in the filings that make up each signal."""
     p = people[["ISSUERCIK", "ISSUERTRADINGSYMBOL", "filing_date"]].copy()
     p["t"] = p["ISSUERTRADINGSYMBOL"].str.upper().str.strip()
     m = sig.reset_index().merge(p, on="ISSUERCIK")
     m = m[(m["filing_date"] <= m["signal_date"]) &
-          (m["filing_date"] > m["signal_date"] - pd.Timedelta(days=WINDOW))]
+          (m["filing_date"] > m["signal_date"] - pd.Timedelta(days=window))]
     tick = m.groupby("index")["t"].agg(lambda s: s.value_counts().idxmax())
     out = sig.copy()
     out["ticker"] = tick
