@@ -73,9 +73,9 @@ def apply_rules(d):
     return step.copy(), pd.DataFrame(log, columns=["step", "rows left"])
 
 
-def _download(batch, start, end):
+def _download(batch, start, end, auto_adjust=False):
     import yfinance as yf
-    df = yf.download(batch, start=start, end=end, auto_adjust=False, progress=False)["Close"]
+    df = yf.download(batch, start=start, end=end, auto_adjust=auto_adjust, progress=False)["Close"]
     if isinstance(df, pd.Series):
         df = df.to_frame(batch[0])
     return df
