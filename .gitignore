@@ -1,6 +1,8 @@
 .env
 settings.local.json
-data/
+data/*
+!data/live/
+!data/people_2026q3_slim.csv
 *.sqlite
 *.db
 __pycache__/
