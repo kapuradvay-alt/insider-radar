@@ -1,81 +1,84 @@
 ticker,company,signal_date,insiders,trade_dates,price_spread,total_value,edgar_link
-PCT,"PureCycle Technologies, Inc.",2026-11-23,3,3,1.062,558846,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001830033&type=4&dateb=&owner=include&count=40
-LAB,STANDARD BIOTOOLS INC.,2026-11-23,8,3,1.007,9200588,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001162194&type=4&dateb=&owner=include&count=40
-TMS,Teamshares Inc,2026-11-23,3,3,1.138,924055,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002048951&type=4&dateb=&owner=include&count=40
-UMH,"UMH PROPERTIES, INC.",2026-11-23,3,3,1.009,75815,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000752642&type=4&dateb=&owner=include&count=40
-ETN,Eaton Corp plc,2026-11-23,3,2,1.073,316223,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001551182&type=4&dateb=&owner=include&count=40
-TROX,Tronox Holdings plc,2026-11-23,3,3,1.773,140114,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001530804&type=4&dateb=&owner=include&count=40
+COHR,COHERENT CORP.,2026-11-24,3,3,1.213,16438969,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000820318&type=4&dateb=&owner=include&count=40
+SNDA,"SONIDA SENIOR LIVING, INC.",2026-11-24,3,3,1.046,15148650,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001043000&type=4&dateb=&owner=include&count=40
+XGPU,"Reliance Global Group, Inc.",2026-11-24,3,1,1.0,514553,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001812727&type=4&dateb=&owner=include&count=40
 APC,ARKO Petroleum Corp.,2026-11-23,3,3,1.148,402040,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002080921&type=4&dateb=&owner=include&count=40
 CTVA,"Corteva, Inc.",2026-11-23,3,3,1.092,523185,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001755672&type=4&dateb=&owner=include&count=40
+ETN,Eaton Corp plc,2026-11-23,3,2,1.073,316223,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001551182&type=4&dateb=&owner=include&count=40
+TMS,Teamshares Inc,2026-11-23,3,3,1.138,924055,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002048951&type=4&dateb=&owner=include&count=40
+UMH,"UMH PROPERTIES, INC.",2026-11-23,3,3,1.009,75815,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000752642&type=4&dateb=&owner=include&count=40
 ENOV,Enovis CORP,2026-11-23,3,7,1.079,298035,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001420800&type=4&dateb=&owner=include&count=40
-BULL,Webull Corp,2026-11-23,3,1,1.025,156637,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866364&type=4&dateb=&owner=include&count=40
 GNL,"Global Net Lease, Inc.",2026-11-23,7,2,1.008,636281,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001526113&type=4&dateb=&owner=include&count=40
+TROX,Tronox Holdings plc,2026-11-23,3,3,1.773,140114,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001530804&type=4&dateb=&owner=include&count=40
+PCT,"PureCycle Technologies, Inc.",2026-11-23,3,3,1.062,558846,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001830033&type=4&dateb=&owner=include&count=40
+LAB,STANDARD BIOTOOLS INC.,2026-11-23,8,3,1.007,9200588,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001162194&type=4&dateb=&owner=include&count=40
+BULL,Webull Corp,2026-11-23,3,1,1.025,156637,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866364&type=4&dateb=&owner=include&count=40
 CCAP,"Crescent Capital BDC, Inc.",2026-11-23,4,4,1.027,183235,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001633336&type=4&dateb=&owner=include&count=40
-AEON,"AEON Biopharma, Inc.",2026-11-20,3,2,1.01,57054,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001837607&type=4&dateb=&owner=include&count=40
-SEI,"Solaris Energy Infrastructure, Inc.",2026-11-20,4,9,1.239,757952,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001697500&type=4&dateb=&owner=include&count=40
-ARR,"Armour Residential REIT, Inc.",2026-11-20,3,3,1.132,91326,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001428205&type=4&dateb=&owner=include&count=40
 CRMD,CorMedix Inc.,2026-11-20,4,4,1.079,588195,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001410098&type=4&dateb=&owner=include&count=40
+ARR,"Armour Residential REIT, Inc.",2026-11-20,3,3,1.132,91326,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001428205&type=4&dateb=&owner=include&count=40
+SEI,"Solaris Energy Infrastructure, Inc.",2026-11-20,4,9,1.239,757952,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001697500&type=4&dateb=&owner=include&count=40
 PICS,PicS N.V.,2026-11-20,3,2,1.073,556660,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001841644&type=4&dateb=&owner=include&count=40
 CTGO,Contango Silver & Gold Inc.,2026-11-20,3,3,1.089,472627,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001502377&type=4&dateb=&owner=include&count=40
-TGEN,TECOGEN INC.,2026-11-19,3,2,1.095,57154,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001537435&type=4&dateb=&owner=include&count=40
-PAL,"Proficient Auto Logistics, Inc",2026-11-19,4,2,1.098,406620,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001998768&type=4&dateb=&owner=include&count=40
+AEON,"AEON Biopharma, Inc.",2026-11-20,3,2,1.01,57054,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001837607&type=4&dateb=&owner=include&count=40
 TLSI,"TriSalus Life Sciences, Inc.",2026-11-19,3,3,1.177,294205,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001826667&type=4&dateb=&owner=include&count=40
 MODD,"Modular Medical, Inc.",2026-11-19,3,1,1.0,60768,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001074871&type=4&dateb=&owner=include&count=40
+PAL,"Proficient Auto Logistics, Inc",2026-11-19,4,2,1.098,406620,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001998768&type=4&dateb=&owner=include&count=40
 OBK,"Origin Bancorp, Inc.",2026-11-19,3,2,1.022,385510,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001516912&type=4&dateb=&owner=include&count=40
-OPAL,OPAL Fuels Inc.,2026-11-18,3,3,1.088,146741,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001842279&type=4&dateb=&owner=include&count=40
-STWD,"STARWOOD PROPERTY TRUST, INC.",2026-11-18,3,3,1.028,18734234,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001465128&type=4&dateb=&owner=include&count=40
-STXS,"Stereotaxis, Inc.",2026-11-18,3,2,1.036,135754,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001289340&type=4&dateb=&owner=include&count=40
-WWB,WINDWARD BIO GROUP AG,2026-11-18,4,1,1.0,89750021,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145089&type=4&dateb=&owner=include&count=40
+TGEN,TECOGEN INC.,2026-11-19,3,2,1.095,57154,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001537435&type=4&dateb=&owner=include&count=40
+NPCE,NeuroPace Inc,2026-11-18,3,2,1.007,302103,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001528287&type=4&dateb=&owner=include&count=40
+SGP,"SpyGlass Pharma, Inc.",2026-11-18,5,1,1.0,162150,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001778922&type=4&dateb=&owner=include&count=40
 EQPT,EquipmentShare.com Inc,2026-11-18,3,4,1.113,1262068,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001693736&type=4&dateb=&owner=include&count=40
 OFRM,"Once Upon a Farm, PBC",2026-11-18,4,2,1.132,555785,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001696556&type=4&dateb=&owner=include&count=40
-NPCE,NeuroPace Inc,2026-11-18,3,2,1.007,302103,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001528287&type=4&dateb=&owner=include&count=40
+STXS,"Stereotaxis, Inc.",2026-11-18,3,2,1.036,135754,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001289340&type=4&dateb=&owner=include&count=40
+OPAL,OPAL Fuels Inc.,2026-11-18,3,3,1.088,146741,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001842279&type=4&dateb=&owner=include&count=40
 RMIX,"Suncrete, Inc.",2026-11-18,5,2,1.225,1086196,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002094433&type=4&dateb=&owner=include&count=40
-SGP,"SpyGlass Pharma, Inc.",2026-11-18,5,1,1.0,162150,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001778922&type=4&dateb=&owner=include&count=40
-FISN,"DEEP FISSION, INC.",2026-11-17,3,3,1.049,64388,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001918102&type=4&dateb=&owner=include&count=40
-NGS,NATURAL GAS SERVICES GROUP INC,2026-11-17,3,2,1.015,192962,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001084991&type=4&dateb=&owner=include&count=40
-ITG,"ITG, Inc./DE/",2026-11-17,5,1,1.048,1181660,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110117&type=4&dateb=&owner=include&count=40
+WWB,WINDWARD BIO GROUP AG,2026-11-18,4,1,1.0,89750021,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002145089&type=4&dateb=&owner=include&count=40
+STWD,"STARWOOD PROPERTY TRUST, INC.",2026-11-18,3,3,1.028,18734234,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001465128&type=4&dateb=&owner=include&count=40
 TH,Target Hospitality Corp.,2026-11-17,3,3,1.062,608241,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001712189&type=4&dateb=&owner=include&count=40
-DKNG,DraftKings Inc.,2026-11-17,3,3,1.085,1450887,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001883685&type=4&dateb=&owner=include&count=40
-PEPG,PepGen Inc.,2026-11-17,5,1,1.0,215625000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001835597&type=4&dateb=&owner=include&count=40
 VISN,"Vistance Networks, Inc.",2026-11-17,3,3,1.058,1147788,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001517228&type=4&dateb=&owner=include&count=40
 NSPR,"InspireMD, Inc.",2026-11-17,5,1,1.0,455001,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001433607&type=4&dateb=&owner=include&count=40
+PEPG,PepGen Inc.,2026-11-17,5,1,1.0,215625000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001835597&type=4&dateb=&owner=include&count=40
 LCTX,"Lineage Cell Therapeutics, Inc.",2026-11-17,3,1,1.145,74198,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000876343&type=4&dateb=&owner=include&count=40
+NGS,NATURAL GAS SERVICES GROUP INC,2026-11-17,3,2,1.015,192962,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001084991&type=4&dateb=&owner=include&count=40
+FISN,"DEEP FISSION, INC.",2026-11-17,3,3,1.049,64388,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001918102&type=4&dateb=&owner=include&count=40
+ITG,"ITG, Inc./DE/",2026-11-17,5,1,1.048,1181660,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002110117&type=4&dateb=&owner=include&count=40
 PAM,Pampa Energy Inc.,2026-11-17,4,8,1.1,7557802,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001469395&type=4&dateb=&owner=include&count=40
+DKNG,DraftKings Inc.,2026-11-17,3,3,1.085,1450887,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001883685&type=4&dateb=&owner=include&count=40
+NSLR,Neostellar Capital Corp.,2026-11-16,3,5,1.059,1139700,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001509470&type=4&dateb=&owner=include&count=40
+ADIG,ADI GLOBAL DISTRIBUTION INC.,2026-11-16,5,2,1.059,325603,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002105139&type=4&dateb=&owner=include&count=40
+CATX,"Perspective Therapeutics, Inc.",2026-11-16,5,2,1.235,128390,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000728387&type=4&dateb=&owner=include&count=40
+HAWK,"HawkEye 360, Inc.",2026-11-16,3,1,1.036,49584,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750704&type=4&dateb=&owner=include&count=40
 FPS,"Forgent Power Solutions, Inc.",2026-11-16,4,1,1.052,1078335,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002080126&type=4&dateb=&owner=include&count=40
 KEEL,Keel Infrastructure Corp.,2026-11-16,3,4,1.121,154520,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001812477&type=4&dateb=&owner=include&count=40
 AOMR,"Angel Oak Mortgage REIT, Inc.",2026-11-16,4,2,1.081,166996,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001766478&type=4&dateb=&owner=include&count=40
-HAWK,"HawkEye 360, Inc.",2026-11-16,3,1,1.036,49584,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001750704&type=4&dateb=&owner=include&count=40
-CATX,"Perspective Therapeutics, Inc.",2026-11-16,5,2,1.235,128390,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000728387&type=4&dateb=&owner=include&count=40
-ADIG,ADI GLOBAL DISTRIBUTION INC.,2026-11-16,5,2,1.059,325603,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002105139&type=4&dateb=&owner=include&count=40
-NSLR,Neostellar Capital Corp.,2026-11-16,3,5,1.059,1139700,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001509470&type=4&dateb=&owner=include&count=40
-FF,FutureFuel Corp.,2026-11-13,4,1,1.004,307781,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001337298&type=4&dateb=&owner=include&count=40
-KGS,"Kodiak Gas Services, Inc.",2026-11-13,3,2,1.031,544115,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001767042&type=4&dateb=&owner=include&count=40
-HPP,"Hudson Pacific Properties, Inc.",2026-11-13,3,4,1.088,905762,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001482512&type=4&dateb=&owner=include&count=40
 BW,"Babcock & Wilcox Enterprises, Inc.",2026-11-13,3,3,1.211,110142,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001630805&type=4&dateb=&owner=include&count=40
+HPP,"Hudson Pacific Properties, Inc.",2026-11-13,3,4,1.088,905762,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001482512&type=4&dateb=&owner=include&count=40
+KGS,"Kodiak Gas Services, Inc.",2026-11-13,3,2,1.031,544115,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001767042&type=4&dateb=&owner=include&count=40
+FF,FutureFuel Corp.,2026-11-13,4,1,1.004,307781,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001337298&type=4&dateb=&owner=include&count=40
 ALT,"Altimmune, Inc.",2026-11-13,3,1,1.01,82244,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326190&type=4&dateb=&owner=include&count=40
 CSQR,"Csquare, Inc.",2026-11-13,3,1,1.056,454429,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002105398&type=4&dateb=&owner=include&count=40
-GSM,Ferroglobe PLC,2026-11-12,5,1,1.055,262563,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001639877&type=4&dateb=&owner=include&count=40
+DOX,AMDOCS LTD,2026-11-12,4,2,1.027,327287,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001062579&type=4&dateb=&owner=include&count=40
 LRMR,"Larimar Therapeutics, Inc.",2026-11-12,6,2,1.049,372294,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001374690&type=4&dateb=&owner=include&count=40
 MP,MP Materials Corp. / DE,2026-11-12,3,2,1.045,3353606,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001801368&type=4&dateb=&owner=include&count=40
 PHIO,Phio Pharmaceuticals Corp.,2026-11-12,3,3,1.024,45755,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001533040&type=4&dateb=&owner=include&count=40
 RM,Regional Management Corp.,2026-11-12,7,1,1.0,2513754,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001519401&type=4&dateb=&owner=include&count=40
-DOX,AMDOCS LTD,2026-11-12,4,2,1.027,327287,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001062579&type=4&dateb=&owner=include&count=40
+GSM,Ferroglobe PLC,2026-11-12,5,1,1.055,262563,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001639877&type=4&dateb=&owner=include&count=40
 DTI,Drilling Tools International Corp,2026-11-10,3,1,1.025,254917,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001884516&type=4&dateb=&owner=include&count=40
 FUN,Six Flags Entertainment Corporation/NEW,2026-11-10,3,3,1.165,15066320,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001999001&type=4&dateb=&owner=include&count=40
 TTMI,TTM TECHNOLOGIES INC,2026-11-09,3,2,1.464,2283952,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001116942&type=4&dateb=&owner=include&count=40
 FLOC,Flowco Holdings Inc.,2026-11-09,3,2,1.033,1104343,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002035149&type=4&dateb=&owner=include&count=40
 OBIO,"Orchestra BioMed Holdings, Inc.",2026-11-09,3,1,1.0,225000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001814114&type=4&dateb=&owner=include&count=40
+MTDR,Matador Resources Co,2026-11-06,4,1,1.035,223705,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001520006&type=4&dateb=&owner=include&count=40
 MDGL,"MADRIGAL PHARMACEUTICALS, INC.",2026-11-06,6,2,1.081,210138193,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001157601&type=4&dateb=&owner=include&count=40
 LKQ,LKQ CORP,2026-11-06,3,3,1.119,792615,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001065696&type=4&dateb=&owner=include&count=40
-MTDR,Matador Resources Co,2026-11-06,4,1,1.035,223705,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001520006&type=4&dateb=&owner=include&count=40
 LBRT,Liberty Energy Inc.,2026-11-05,3,2,1.027,645635,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001694028&type=4&dateb=&owner=include&count=40
 ASPE,"Aspen Neuroscience, Inc.",2026-11-04,3,1,1.0,45000000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002124080&type=4&dateb=&owner=include&count=40
 UPBD,"UPBOUND GROUP, INC.",2026-11-04,6,3,1.352,1290672,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000933036&type=4&dateb=&owner=include&count=40
 AN,"AUTONATION, INC.",2026-11-04,3,2,1.028,1431864,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000350698&type=4&dateb=&owner=include&count=40
 SYNX,Silynxcom Ltd.,2026-11-03,3,3,1.244,118016,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001976443&type=4&dateb=&owner=include&count=40
-PLBY,"Playboy, Inc.",2026-11-03,4,1,1.0,20000001,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001803914&type=4&dateb=&owner=include&count=40
 TRTX,"TPG RE Finance Trust, Inc.",2026-11-03,3,1,1.014,298699,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001630472&type=4&dateb=&owner=include&count=40
 OCFC,OCEANFIRST FINANCIAL CORP,2026-11-03,3,2,1.036,277785,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001004702&type=4&dateb=&owner=include&count=40
+PLBY,"Playboy, Inc.",2026-11-03,4,1,1.0,20000001,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001803914&type=4&dateb=&owner=include&count=40
 BBTX,"Bambusa Therapeutics, Inc.",2026-11-03,6,2,1.124,239199786,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002044950&type=4&dateb=&owner=include&count=40
 FFIN,FIRST FINANCIAL BANKSHARES INC,2026-11-03,3,3,1.021,148938,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000036029&type=4&dateb=&owner=include&count=40
 STRZ,STARZ ENTERTAINMENT CORP /CN/,2026-11-03,3,1,1.032,176706,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000929351&type=4&dateb=&owner=include&count=40
@@ -91,11 +94,11 @@ IMSR,Terrestrial Energy Inc. /DE/,2026-10-15,3,3,1.111,112279,https://www.sec.go
 WVVI,WILLAMETTE VALLEY VINEYARDS INC,2026-10-13,3,4,1.228,50769,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000838875&type=4&dateb=&owner=include&count=40
 AGMB,AgomAb Therapeutics NV,2026-10-07,3,2,1.026,266670,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002020932&type=4&dateb=&owner=include&count=40
 CINT,CI&T Inc,2026-10-02,3,6,1.078,50385,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001868995&type=4&dateb=&owner=include&count=40
-PRHI,"Presurance Holdings, Inc.",2026-10-01,5,1,1.059,248878,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001502292&type=4&dateb=&owner=include&count=40
 SPG,SIMON PROPERTY GROUP INC.,2026-10-01,9,1,1.0,448347,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001063761&type=4&dateb=&owner=include&count=40
-BPRE,Bluerock Private Real Estate Fund,2026-09-30,3,4,1.053,5534860,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001551047&type=4&dateb=&owner=include&count=40
-FUL,FULLER H B CO,2026-09-30,5,2,1.021,499075,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000039368&type=4&dateb=&owner=include&count=40
+PRHI,"Presurance Holdings, Inc.",2026-10-01,5,1,1.059,248878,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001502292&type=4&dateb=&owner=include&count=40
 ADRX,"ADARx Pharmaceuticals, Inc.",2026-09-30,8,1,1.0,125145772,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001802369&type=4&dateb=&owner=include&count=40
+FUL,FULLER H B CO,2026-09-30,5,2,1.021,499075,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000039368&type=4&dateb=&owner=include&count=40
+BPRE,Bluerock Private Real Estate Fund,2026-09-30,3,4,1.053,5534860,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001551047&type=4&dateb=&owner=include&count=40
 KOD,Kodiak Sciences Inc.,2026-09-30,6,2,1.468,941935816,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001468748&type=4&dateb=&owner=include&count=40
 ANIX,Anixa Biosciences Inc,2026-09-28,3,2,1.033,165167,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000715446&type=4&dateb=&owner=include&count=40
 ETRA,"Electra Therapeutics, Inc.",2026-09-23,4,1,1.0,79999980,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002088082&type=4&dateb=&owner=include&count=40
@@ -105,15 +108,15 @@ KRMN,Karman Holdings Inc.,2026-09-18,3,1,1.018,1036477,https://www.sec.gov/cgi-b
 BWMX,"BETTERWARE DE MEXICO, S.A.P.I. DE C.V",2026-09-17,3,2,1.015,2293800,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001788257&type=4&dateb=&owner=include&count=40
 XBP,"XBP Global Holdings, Inc.",2026-09-17,3,1,1.0,694140,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001839530&type=4&dateb=&owner=include&count=40
 EML,EASTERN CO,2026-09-17,4,1,1.0,117993,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000031107&type=4&dateb=&owner=include&count=40
-TENX,"TENAX THERAPEUTICS, INC.",2026-09-17,3,3,1.066,132876,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034956&type=4&dateb=&owner=include&count=40
 RVSB,RIVERVIEW BANCORP INC,2026-09-17,3,3,1.062,40591,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001041368&type=4&dateb=&owner=include&count=40
-SBLK,Star Bulk Carriers Corp.,2026-09-16,3,1,1.0,650210,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001386716&type=4&dateb=&owner=include&count=40
+TENX,"TENAX THERAPEUTICS, INC.",2026-09-17,3,3,1.066,132876,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000034956&type=4&dateb=&owner=include&count=40
 CTSO,Cytosorbents Corp,2026-09-16,3,2,1.037,50435,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001175151&type=4&dateb=&owner=include&count=40
-LMB,"Limbach Holdings, Inc.",2026-09-16,3,3,1.048,515933,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001606163&type=4&dateb=&owner=include&count=40
+SBLK,Star Bulk Carriers Corp.,2026-09-16,3,1,1.0,650210,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001386716&type=4&dateb=&owner=include&count=40
 CELH,"Celsius Holdings, Inc.",2026-09-16,3,3,1.02,1830120,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001341766&type=4&dateb=&owner=include&count=40
+LMB,"Limbach Holdings, Inc.",2026-09-16,3,3,1.048,515933,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001606163&type=4&dateb=&owner=include&count=40
 RWT,REDWOOD TRUST INC,2026-09-15,3,1,1.003,676850,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000930236&type=4&dateb=&owner=include&count=40
-COO,"COOPER COMPANIES, INC.",2026-09-15,3,2,1.021,1330840,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000711404&type=4&dateb=&owner=include&count=40
 GROV,"Grove Collaborative Holdings, Inc.",2026-09-15,3,3,1.049,183346,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001841761&type=4&dateb=&owner=include&count=40
+COO,"COOPER COMPANIES, INC.",2026-09-15,3,2,1.021,1330840,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000711404&type=4&dateb=&owner=include&count=40
 PMTS,CPI Card Group Inc.,2026-09-14,4,1,1.0,671488,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001641614&type=4&dateb=&owner=include&count=40
 GRNT,"Granite Ridge Resources, Inc.",2026-09-14,3,3,1.004,105800,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001928446&type=4&dateb=&owner=include&count=40
 GME,GameStop Corp.,2026-09-10,4,3,1.084,21710076,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001326380&type=4&dateb=&owner=include&count=40
@@ -124,11 +127,11 @@ GPUS,"Hyperscale Data, Inc.",2026-09-08,4,8,1.789,650010,https://www.sec.gov/cgi
 WIX,Wix.com Ltd.,2026-09-02,6,1,1.0,185719,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001576789&type=4&dateb=&owner=include&count=40
 UAMY,UNITED STATES ANTIMONY CORP,2026-09-02,3,2,1.06,291736,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000101538&type=4&dateb=&owner=include&count=40
 QNRX,"Quoin Pharmaceuticals, Ltd.",2026-09-01,4,1,1.0,279966,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001671502&type=4&dateb=&owner=include&count=40
-PRTS,"CarParts.com, Inc.",2026-08-31,3,4,1.164,236358,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001378950&type=4&dateb=&owner=include&count=40
 SCOR,"COMSCORE, INC.",2026-08-31,3,3,1.011,246830,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001158172&type=4&dateb=&owner=include&count=40
+PRTS,"CarParts.com, Inc.",2026-08-31,3,4,1.164,236358,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001378950&type=4&dateb=&owner=include&count=40
 DKS,"DICK'S SPORTING GOODS, INC.",2026-08-28,4,2,1.016,3722320,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001089063&type=4&dateb=&owner=include&count=40
-LIEN,"Chicago Atlantic BDC, Inc.",2026-08-27,3,9,1.068,644223,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001843162&type=4&dateb=&owner=include&count=40
 IMTX,Immatics N.V.,2026-08-27,3,1,1.0,22499974,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001809196&type=4&dateb=&owner=include&count=40
+LIEN,"Chicago Atlantic BDC, Inc.",2026-08-27,3,9,1.068,644223,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001843162&type=4&dateb=&owner=include&count=40
 BMRA,BIOMERICA INC,2026-08-27,5,2,1.0,158000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000073290&type=4&dateb=&owner=include&count=40
 AMRC,"Ameresco, Inc.",2026-08-26,4,3,1.056,558741,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001488139&type=4&dateb=&owner=include&count=40
 AMR,"Alpha Metallurgical Resources, Inc.",2026-08-25,7,3,1.143,19678047,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001704715&type=4&dateb=&owner=include&count=40
@@ -136,45 +139,45 @@ ODYS,Odysight.ai Inc.,2026-08-24,3,1,1.0,3850000,https://www.sec.gov/cgi-bin/bro
 REFI,"Chicago Atlantic Real Estate Finance, Inc.",2026-08-21,3,3,1.027,776920,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001867949&type=4&dateb=&owner=include&count=40
 TISI,TEAM INC,2026-08-21,3,3,1.013,102720,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000318833&type=4&dateb=&owner=include&count=40
 INV,"Innventure, Inc.",2026-08-21,4,1,1.007,807110,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002001557&type=4&dateb=&owner=include&count=40
-SMRT,"SmartRent, Inc.",2026-08-20,3,3,1.044,371560,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001837014&type=4&dateb=&owner=include&count=40
 HGBL,Heritage Global Inc.,2026-08-20,3,2,1.036,99400,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000849145&type=4&dateb=&owner=include&count=40
-AVBC,"Avidia Bancorp, Inc.",2026-08-19,3,2,1.041,266043,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002058758&type=4&dateb=&owner=include&count=40
-BLND,"Blend Labs, Inc.",2026-08-19,7,1,1.0,175362,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855747&type=4&dateb=&owner=include&count=40
+SMRT,"SmartRent, Inc.",2026-08-20,3,3,1.044,371560,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001837014&type=4&dateb=&owner=include&count=40
 BRLT,"Brilliant Earth Group, Inc.",2026-08-19,3,3,1.088,38828,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001866757&type=4&dateb=&owner=include&count=40
+BLND,"Blend Labs, Inc.",2026-08-19,7,1,1.0,175362,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001855747&type=4&dateb=&owner=include&count=40
+AVBC,"Avidia Bancorp, Inc.",2026-08-19,3,2,1.041,266043,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002058758&type=4&dateb=&owner=include&count=40
+ABCL,AbCellera Biologics Inc.,2026-08-18,3,3,1.069,975237,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001703057&type=4&dateb=&owner=include&count=40
 VRCA,Verrica Pharmaceuticals Inc.,2026-08-18,4,3,1.031,210890,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001660334&type=4&dateb=&owner=include&count=40
 REZI,"RESIDEO TECHNOLOGIES, INC.",2026-08-18,3,2,1.011,848123,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001740332&type=4&dateb=&owner=include&count=40
-ABCL,AbCellera Biologics Inc.,2026-08-18,3,3,1.069,975237,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001703057&type=4&dateb=&owner=include&count=40
-ACON,"Aclarion, Inc.",2026-08-17,3,1,1.039,80150,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001635077&type=4&dateb=&owner=include&count=40
-CDNL,Cardinal Infrastructure Group Inc.,2026-08-17,6,1,1.089,8247799,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002079999&type=4&dateb=&owner=include&count=40
-ANGX,"Angel Studios, Inc.",2026-08-17,3,3,1.162,2801608,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001865200&type=4&dateb=&owner=include&count=40
 APLM,Apollomics Inc.,2026-08-17,3,1,1.25,8250009,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001944885&type=4&dateb=&owner=include&count=40
-CE,Celanese Corp,2026-08-17,3,2,1.002,230066,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001306830&type=4&dateb=&owner=include&count=40
-DKL,"Delek Logistics Partners, LP",2026-08-17,5,1,1.0,750000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001552797&type=4&dateb=&owner=include&count=40
-MATW,MATTHEWS INTERNATIONAL CORP,2026-08-17,3,2,1.027,233120,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000063296&type=4&dateb=&owner=include&count=40
 FOCL,EDAP TMS SA,2026-08-17,4,1,1.0,408500,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001041934&type=4&dateb=&owner=include&count=40
+ANGX,"Angel Studios, Inc.",2026-08-17,3,3,1.162,2801608,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001865200&type=4&dateb=&owner=include&count=40
+DKL,"Delek Logistics Partners, LP",2026-08-17,5,1,1.0,750000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001552797&type=4&dateb=&owner=include&count=40
+CDNL,Cardinal Infrastructure Group Inc.,2026-08-17,6,1,1.089,8247799,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002079999&type=4&dateb=&owner=include&count=40
+ACON,"Aclarion, Inc.",2026-08-17,3,1,1.039,80150,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001635077&type=4&dateb=&owner=include&count=40
+MATW,MATTHEWS INTERNATIONAL CORP,2026-08-17,3,2,1.027,233120,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000063296&type=4&dateb=&owner=include&count=40
+CE,Celanese Corp,2026-08-17,3,2,1.002,230066,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001306830&type=4&dateb=&owner=include&count=40
 INFQ,"Infleqtion, Inc.",2026-08-14,3,1,1.0,1940165,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002007825&type=4&dateb=&owner=include&count=40
-ELAN,Elanco Animal Health Inc,2026-08-13,3,2,1.086,442936,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001739104&type=4&dateb=&owner=include&count=40
 AMRZ,Amrize Ltd,2026-08-13,5,2,1.022,838852,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002035989&type=4&dateb=&owner=include&count=40
+ELAN,Elanco Animal Health Inc,2026-08-13,3,2,1.086,442936,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001739104&type=4&dateb=&owner=include&count=40
 HOG,"HARLEY-DAVIDSON, INC.",2026-08-13,3,3,1.074,1439550,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000793952&type=4&dateb=&owner=include&count=40
 EMBC,Embecta Corp.,2026-08-13,4,1,1.069,557850,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001872789&type=4&dateb=&owner=include&count=40
 XRN,Chiron Real Estate Inc.,2026-08-13,3,3,1.027,2542509,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001533615&type=4&dateb=&owner=include&count=40
-PFE,PFIZER INC,2026-08-12,3,2,1.035,2960110,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078003&type=4&dateb=&owner=include&count=40
-APTV,Aptiv PLC,2026-08-12,3,3,1.063,8054894,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001521332&type=4&dateb=&owner=include&count=40
 HEPA,"Hepion Pharmaceuticals, Inc.",2026-08-12,5,1,1.0,825000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001583771&type=4&dateb=&owner=include&count=40
+APTV,Aptiv PLC,2026-08-12,3,3,1.063,8054894,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001521332&type=4&dateb=&owner=include&count=40
+PFE,PFIZER INC,2026-08-12,3,2,1.035,2960110,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000078003&type=4&dateb=&owner=include&count=40
 FEMY,FEMASYS INC,2026-08-11,5,1,1.0,134000,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001339005&type=4&dateb=&owner=include&count=40
-CC,Chemours Co,2026-08-11,5,2,1.06,408098,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001627223&type=4&dateb=&owner=include&count=40
 KMPR,KEMPER Corp,2026-08-11,4,2,1.024,288380,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000860748&type=4&dateb=&owner=include&count=40
+CC,Chemours Co,2026-08-11,5,2,1.06,408098,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001627223&type=4&dateb=&owner=include&count=40
 BLSM,"BlossomHill Therapeutics, Inc.",2026-08-10,4,2,1.013,5181900,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001839970&type=4&dateb=&owner=include&count=40
+TLRY,"Tilray Brands, Inc.",2026-08-07,3,3,1.079,69225,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001731348&type=4&dateb=&owner=include&count=40
 BBBY,"NEIGHBORHOOD INTELLIGENCE, INC.",2026-08-07,3,2,1.035,307524,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001130713&type=4&dateb=&owner=include&count=40
 CCB,COASTAL FINANCIAL CORP,2026-08-07,3,3,1.03,1115894,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001437958&type=4&dateb=&owner=include&count=40
 BRVE,"Braveheart Bio, Inc.",2026-08-07,6,1,1.0,4594950,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002131524&type=4&dateb=&owner=include&count=40
-TLRY,"Tilray Brands, Inc.",2026-08-07,3,3,1.079,69225,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001731348&type=4&dateb=&owner=include&count=40
-GBFH,GBank Financial Holdings Inc.,2026-08-05,4,2,1.032,1217219,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001791145&type=4&dateb=&owner=include&count=40
 TSCO,TRACTOR SUPPLY CO /DE/,2026-08-05,3,2,1.019,652394,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000916365&type=4&dateb=&owner=include&count=40
 BSX,BOSTON SCIENTIFIC CORP,2026-08-05,3,3,1.068,9285271,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000885725&type=4&dateb=&owner=include&count=40
-ORN,Orion Group Holdings Inc,2026-08-04,4,1,1.034,320819,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001402829&type=4&dateb=&owner=include&count=40
-JMKE,Jersey Mike's Subs Inc.,2026-08-04,6,1,1.0,1049927,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002127043&type=4&dateb=&owner=include&count=40
+GBFH,GBank Financial Holdings Inc.,2026-08-05,4,2,1.032,1217219,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001791145&type=4&dateb=&owner=include&count=40
 MKZR,"MacKenzie Realty Capital, Inc.",2026-08-04,3,2,1.175,262818,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001550913&type=4&dateb=&owner=include&count=40
+JMKE,Jersey Mike's Subs Inc.,2026-08-04,6,1,1.0,1049927,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002127043&type=4&dateb=&owner=include&count=40
+ORN,Orion Group Holdings Inc,2026-08-04,4,1,1.034,320819,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001402829&type=4&dateb=&owner=include&count=40
 ACI,"Albertsons Companies, Inc.",2026-08-03,3,3,1.011,2515872,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001646972&type=4&dateb=&owner=include&count=40
 HCWB,HCW Biologics Inc.,2026-07-31,3,1,1.0,100186,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828673&type=4&dateb=&owner=include&count=40
 NNOX,Nano-X Imaging Ltd.,2026-07-29,3,2,1.044,109680,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001795251&type=4&dateb=&owner=include&count=40
@@ -182,8 +185,8 @@ SCTX,"Scribe Therapeutics, Inc.",2026-07-28,3,1,1.0,432799,https://www.sec.gov/c
 FSBC,FIVE STAR BANCORP,2026-07-24,6,1,1.0,6279988,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001275168&type=4&dateb=&owner=include&count=40
 BYRN,Byrna Technologies Inc.,2026-07-23,3,2,1.038,253203,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001354866&type=4&dateb=&owner=include&count=40
 RBKB,"Rhinebeck Bancorp, Inc.",2026-07-23,4,1,1.007,656420,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001751783&type=4&dateb=&owner=include&count=40
-PBLS,"Parabilis Medicines, Inc.",2026-07-22,5,3,1.106,34597756,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001657677&type=4&dateb=&owner=include&count=40
 CLBK,"Columbia Financial, Inc./MD/",2026-07-22,16,1,1.0,4778740,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002115119&type=4&dateb=&owner=include&count=40
+PBLS,"Parabilis Medicines, Inc.",2026-07-22,5,3,1.106,34597756,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001657677&type=4&dateb=&owner=include&count=40
 CHCO,CITY HOLDING CO,2026-07-21,4,1,1.0,59740,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000726854&type=4&dateb=&owner=include&count=40
 CBIO,"CRESCENT BIOPHARMA, INC.",2026-07-20,4,1,1.0,49500100,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001253689&type=4&dateb=&owner=include&count=40
 GABC,"GERMAN AMERICAN BANCORP, INC.",2026-07-17,5,1,1.0,95004,https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000714395&type=4&dateb=&owner=include&count=40
