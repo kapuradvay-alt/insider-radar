@@ -6,6 +6,8 @@
 
 This is a student research project, not investment advice.
 
+The repository also contains a **monitor**: a Streamlit app (`app.py`) listing recent cluster buys, refreshed every weekday by a scheduled GitHub job (see [Live monitor](#live-monitor)). The monitor lists signals. It is not a recommendation, and the backtest above found no evidence that they work.
+
 ## Results
 
 Signal = at least 3 different officers or directors each buying at least $10,000 within 14 days (full rules in [`docs/cluster_rule.md`](docs/cluster_rule.md)). Entry is the close of the first trading day after the filing. Exit is 63 trading days later. Returns are split- and dividend-adjusted. Stocks that stop trading are valued at their last price.
@@ -46,6 +48,30 @@ All result files are in [`results/`](results/).
 
 The decision rule and the sensitivity grid were committed to this repository before the results they govern. The backtest design note was written on 21 November 2026, before any return was calculated (the file's modification time shows this), but it was only committed afterwards, together with the held-out result, so the git history alone does not prove its timing. The sensitivity note was written after the main-test result was known, and says so.
 
+## Live monitor
+
+The app shows cluster buys found with the same rule as the backtest (3 officers or directors, $10,000 each, 14 days, 90-day cooldown per company). **The live list has not been backtested.** Only the 2022 to 2025 result above is evidence, and that result is negative.
+
+**How the data gets there**
+
+1. SEC quarterly file for 1 Jul to 30 Sep 2026 (already cleaned; the committed copy, `data/people_2026q3_slim.csv`, leaves out insiders' street addresses).
+2. From 1 Oct 2026, the SEC's daily filing lists. [`src/live_form4.py`](src/live_form4.py) opens each Form 4 (several hundred a day), keeps code P purchases and saves one file per day in `data/live/`. It sends a contact email with every request and stays at about 4 requests a second or fewer, as the SEC's fair-access rules ask.
+3. [`src/make_live_data.py`](src/make_live_data.py) applies the same cleaning rules and price check as the backtest, finds the clusters and writes `app_data/`.
+4. A GitHub Actions job ([`.github/workflows/daily-update.yml`](.github/workflows/daily-update.yml)) runs steps 2 and 3 Tuesday to Saturday at 04:30 UTC (the SEC posts the previous US day's list in the evening, US time) and commits the result. GitHub can start scheduled jobs late: the first scheduled run was committed about an hour after its slot. The contact email is stored as a GitHub secret, not in the code.
+
+**How it was checked**
+
+- The fetcher was compared with the SEC's own quarterly data for three days that both cover (15, 29 and 30 September 2026): the same filings, insiders and share counts. Prices differ by up to half a cent, because the SEC rounds to two decimals ([`src/check_live.py`](src/check_live.py)).
+- That check caught a real bug first. The SEC lists each filing once under the company and once under each insider, and the first version counted every purchase two or three times (514 rows against the SEC's 159 for 15 September). It is fixed.
+- A safeguard stops the job without changing anything if Yahoo has prices for fewer than 85% of the tickers. Coverage was 94% on the first run on a home computer and 99% on the first run on GitHub. The tickers without prices looked like warrants, preferred shares and fund codes (not individually checked).
+
+**Known gaps in the live data**
+
+- Two filings listed by the SEC could not be downloaded (error 404 at every address): one from 28 September, which the SEC's quarterly data shows was a sale (code S, so it would not count), and one from 19 October that could not be checked. They are recorded in `data/live/skipped.txt`.
+- The 90-day cooldown only sees filings from 1 July 2026 on, so a company that signalled earlier could signal again too soon.
+- Amendments (Form 4/A) are ignored, as in the backtest.
+- Big one-day clusters can be share offerings, not independent buying. They are not filtered out (the app has a checkbox for clusters spread over 2 or more days).
+
 ## Limits
 
 - **Survivorship bias.** Yahoo had prices for 66% of the tickers in 2022 Q1 and 93% in 2025 Q4. Companies that later disappeared (delisting, bankruptcy, takeover, ticker change) are missing from the older years. No signal in the final list stopped trading inside its horizon, because those companies never made it in. This probably flatters the results, since failures are missing. The direction is my reasoning, not something I measured, and takeovers at a premium are missing too.
@@ -58,7 +84,7 @@ The decision rule and the sensitivity grid were committed to this repository bef
 
 ## Reproduce it
 
-Python with pandas, numpy, yfinance and requests, run from the project folder (data is not committed):
+Python with pandas, numpy, yfinance and requests, run from the project folder (the 2022 to 2025 data is not committed):
 
 ```
 python src/get_quarters.py you@example.com 2022 2025        # SEC download and cleaning; the SEC asks for a contact email
@@ -72,5 +98,14 @@ python src/sensitivity.py run
 ```
 
 Yahoo data changes over time, so a rerun may not match exactly.
+
+For the live monitor (needs streamlit as well):
+
+```
+python src/live_form4.py you@example.com 2026-10-01 2026-11-24   # fetch filing days; finished days are skipped
+python src/live_status.py 2026-10-01 2026-11-24                  # shows which days are missing
+python src/make_live_data.py                                     # rebuilds app_data/ (needs Yahoo prices)
+streamlit run app.py
+```
 
 Built by a finance student with help from Claude (Anthropic).
