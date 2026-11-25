@@ -29,8 +29,9 @@ with tab1:
     st.subheader("Recent cluster buys")
     st.caption(
         f"Based on SEC Form 4 filings from {meta['filings_from']} to {meta['filings_to']} "
-        f"(data: {meta['source']}; built {meta['built_on']}). The list is rebuilt by hand, not "
-        "automatically, so filings after the last date above are not included."
+        f"(data: {meta['source']}; built {meta['built_on']}). A scheduled job rebuilds the list every "
+        "weekday evening (US time). If the date above looks old, the job has probably failed, and "
+        "newer filings are not included."
     )
     st.write(
         "A **cluster** is at least 3 different officers or directors of the same company each buying "
@@ -130,10 +131,11 @@ with tab3:
         "- **Ticker reuse** (a ticker later used by a different company) was not checked.\n"
         "- **Scope.** The result applies to this signal definition, this period and these data only. It says "
         "nothing about insider buying in general or about other markets.\n"
-        "- **Not automatic.** The list is rebuilt when the project owner runs the update. It is current "
-        "only up to the 'filings to' date shown on the first tab. Recent filings use the SEC's daily "
-        "filing lists; older ones use the SEC's quarterly files (checked against each other on three days: "
-        "identical). Two filings (out of about 17,000) could not be downloaded from the SEC."
+        "- **Updated by a scheduled job, not in real time.** A GitHub job rebuilds the list on weekday "
+        "evenings (US time) from the SEC's daily filing lists, and it can run late or fail. Insiders usually file within "
+        "two business days after they trade, so the list always lags the trades by a few days. Recent "
+        "filings use the SEC's daily lists; older ones use the SEC's quarterly files (checked against each "
+        "other on three days: identical). Two filings (out of about 19,000 read since 1 October) could not be downloaded from the SEC."
     )
     st.subheader("Method")
     st.write(

@@ -6,6 +6,8 @@
 
 This is a student research project, not investment advice.
 
+**Live app: https://insider-radar-umfai4cvgcn9vrs28kbqm2.streamlit.app/** (free hosting; it goes to sleep when nobody has visited for a while, so click the wake-up button and wait a moment).
+
 The repository also contains a **monitor**: a Streamlit app (`app.py`) listing recent cluster buys, refreshed every weekday by a scheduled GitHub job (see [Live monitor](#live-monitor)). The monitor lists signals. It is not a recommendation, and the backtest above found no evidence that they work.
 
 ## Results
