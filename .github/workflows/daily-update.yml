@@ -50,5 +50,7 @@ jobs:
             echo "Nothing new to save."
           else
             git commit -m "Daily update $(date -u +%F)"
+            # if someone pushed while this job was running, merge their change first, then push
+            git pull --rebase origin main
             git push
           fi

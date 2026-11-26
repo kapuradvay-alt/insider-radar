@@ -9,47 +9,108 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="Insider cluster-buy radar", layout="wide")
+st.set_page_config(page_title="Insider cluster-buy radar", page_icon="📡", layout="wide")
 
 HERE = Path(__file__).parent
 signals = pd.read_csv(HERE / "app_data" / "signals_latest.csv", parse_dates=["signal_date"])
 meta = json.loads((HERE / "app_data" / "meta.json").read_text())
 
+st.markdown(
+    """
+    <style>
+    .block-container {padding-top: 2.2rem; max-width: 1200px;}
+    h1 {font-size: 2.2rem !important; letter-spacing: -0.5px; margin-bottom: 0;}
+    .subtitle {color: #9FB0C8; margin: 0.2rem 0 1.1rem 0; font-size: 1.05rem;}
+    [data-testid="stMetric"] {background: #131D33; border: 1px solid #22304D;
+                              border-radius: 12px; padding: 14px 18px;}
+    [data-testid="stMetricLabel"] {opacity: 0.75;}
+    .stTabs [data-baseweb="tab"] {font-size: 1.02rem;}
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+filings_to = pd.Timestamp(meta["filings_to"])
+built_on = pd.Timestamp(meta["built_on"])
+today = pd.Timestamp.now(tz="UTC").tz_localize(None).normalize()
+age_days = (today - filings_to).days
+
 st.title("Insider cluster-buy radar")
-st.error(
+st.markdown(
+    '<div class="subtitle">When several company insiders buy their own stock within days of each other, '
+    "does the stock do well afterwards? A monitor of recent cases, with our test of the idea attached.</div>",
+    unsafe_allow_html=True,
+)
+st.warning(
     "**Not investment advice.** In our own test of 2022-2025 (SEC Form 4 data), stocks that had "
     "these cluster buys did **not** beat the S&P 500 or a small-cap index over three months after "
     "costs. This page is a monitor with its evidence attached, not a list of recommendations."
 )
+if age_days >= 5:
+    st.error(
+        f"This list may be out of date. The newest filing in it is from {filings_to:%d %b %Y}, "
+        f"{age_days} days ago, so the daily update has probably failed."
+    )
 
 tab1, tab2, tab3 = st.tabs(["Recent cluster buys", "What the backtest found", "Limits and method"])
 
 # ---------------------------------------------------------------- tab 1
 with tab1:
-    st.subheader("Recent cluster buys")
+    week = signals[signals["signal_date"] > filings_to - pd.Timedelta(days=7)]
+    m1, m2, m3, m4 = st.columns(4)
+    m1.metric("Clusters in the list", f"{len(signals):,}")
+    m2.metric("Newest filing included", f"{filings_to:%d %b %Y}")
+    m3.metric("New in the last 7 days", f"{len(week):,}")
+    m4.metric("List rebuilt", f"{built_on:%d %b %Y}")
     st.caption(
-        f"Based on SEC Form 4 filings from {meta['filings_from']} to {meta['filings_to']} "
-        f"(data: {meta['source']}; built {meta['built_on']}). A scheduled job rebuilds the list every "
-        "weekday evening (US time). If the date above looks old, the job has probably failed, and "
-        "newer filings are not included."
+        f"SEC Form 4 filings from {meta['filings_from']} to {meta['filings_to']}. "
+        "A scheduled job rebuilds the list every weekday evening (US time). "
+        "Insiders usually file within two business days of a trade, so the list lags the trades by a few days."
     )
-    st.write(
-        "A **cluster** is at least 3 different officers or directors of the same company each buying "
-        "at least $10,000 of its stock in the open market, with all filings inside 14 days. "
-        "The signal date is the day the cluster became public (the filing date)."
-    )
-    c1, c2 = st.columns(2)
-    min_ins = c1.slider("Minimum number of insiders", 3, int(signals["insiders"].max()), 3)
-    multi = c2.checkbox("Only clusters whose purchases happened on 2 or more different days", value=False)
+
+    with st.expander("What counts as a cluster?"):
+        st.write(
+            "A **cluster** is at least 3 different officers or directors of the same company each buying "
+            "at least $10,000 of its stock in the open market, with all filings inside 14 days. "
+            "The signal date is the day the cluster became public (the filing date)."
+        )
+
+    f1, f2, f3 = st.columns([1.3, 1.7, 1.6])
+    period = f1.selectbox("Period", ["Everything since 1 July", "Last 7 days", "Last 30 days"])
+    top = int(signals["insiders"].max()) if len(signals) else 3
+    min_ins = f2.slider("Minimum number of insiders", 3, top, 3) if top > 3 else 3
+    query = f3.text_input("Search ticker or company", placeholder="e.g. COHR or Coherent")
+    multi = st.checkbox("Only clusters whose purchases happened on 2 or more different days", value=False)
+
     view = signals[signals["insiders"] >= min_ins]
+    if period == "Last 7 days":
+        view = view[view["signal_date"] > filings_to - pd.Timedelta(days=7)]
+    elif period == "Last 30 days":
+        view = view[view["signal_date"] > filings_to - pd.Timedelta(days=30)]
     if multi:
         view = view[view["trade_dates"] >= 2]
+    if query.strip():
+        q = query.strip().lower()
+        view = view[view["ticker"].astype(str).str.lower().str.contains(q, regex=False)
+                    | view["company"].astype(str).str.lower().str.contains(q, regex=False)]
     st.write(f"**{len(view)}** of {len(signals)} clusters shown.")
+
+    def note(row):
+        parts = []
+        if row["trade_dates"] == 1:
+            parts.append("single trade day")
+        if row["total_value"] >= 10_000_000:
+            parts.append("total over $10M")
+        return " · ".join(parts)
+
     view = view.assign(price_spread=view["price_spread"] - 1)       # 1.021 -> 0.021, shown as 2.1%
+    view["note"] = view.apply(note, axis=1) if len(view) else ""
     shown = view.rename(columns={
         "ticker": "Ticker", "company": "Company", "signal_date": "Signal date",
         "insiders": "Insiders", "trade_dates": "Trade days", "price_spread": "Price gap",
-        "total_value": "Total bought ($)", "edgar_link": "SEC filings"})
+        "total_value": "Total bought ($)", "note": "Note", "edgar_link": "SEC filings"})
+    shown = shown[["Ticker", "Company", "Signal date", "Insiders", "Trade days", "Price gap",
+                   "Total bought ($)", "Note", "SEC filings"]]
     # Styler shows $ and thousands commas but keeps the column numeric, so sorting still works
     styled = shown.style.format({
         "Signal date": "{:%Y-%m-%d}",
@@ -59,7 +120,14 @@ with tab1:
     st.dataframe(
         styled,
         hide_index=True,
+        height=min(620, 40 + 35 * max(len(shown), 1)),
         column_config={"SEC filings": st.column_config.LinkColumn(display_text="open")},
+    )
+    st.download_button(
+        "Download this table (CSV)",
+        data=shown.drop(columns=["SEC filings"]).to_csv(index=False).encode("utf-8"),
+        file_name=f"insider_clusters_{meta['filings_to']}.csv",
+        mime="text/csv",
     )
     with st.expander("How to read the columns"):
         st.write(
@@ -71,6 +139,8 @@ with tab1:
             "- **Total bought:** very large totals, or a large price gap, can come from share "
             "offerings or private placements and not ordinary market buying. We have not checked "
             "individual cases.\n"
+            "- **Note:** only states facts visible in the table: all purchases on one trade day, or a "
+            "total above $10 million. It is a prompt to look closer, not a judgement.\n"
             "- **SEC filings:** opens the company's Form 4 list on sec.gov so you can check the "
             "original filings yourself."
         )
@@ -91,6 +161,11 @@ with tab2:
         columns=["Period", "Signals", "Median excess vs SPY", "Median excess vs IWM", "Beat SPY / IWM"],
     )
     st.dataframe(table, hide_index=True)
+    st.caption("Median excess return after a 1% trading cost, in percentage points. Below zero = the typical signal lagged the benchmark.")
+    st.bar_chart(
+        pd.DataFrame({"vs S&P 500 (SPY)": [-2.5, -4.3], "vs small caps (IWM)": [-1.2, -5.2]},
+                     index=["Main test (2022-2024)", "Held-out (2025)"]),
+    )
     st.write(
         "**Excess return** is the stock's return minus the benchmark's over the same dates. The **median** "
         "is the typical signal. A negative number means the typical signal lagged the benchmark."
