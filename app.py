@@ -62,6 +62,14 @@ with tab1:
     m2.metric("Newest filing included", f"{filings_to:%d %b %Y}")
     m3.metric("New in the last 7 days", f"{len(week):,}")
     m4.metric("List rebuilt", f"{built_on:%d %b %Y}")
+    newest_signal = signals["signal_date"].max() if len(signals) else None
+    if newest_signal is not None and newest_signal < filings_to:
+        st.info(
+            f"Filings are read up to **{filings_to:%d %b %Y}**. The newest cluster in the table below "
+            f"completed on **{newest_signal:%d %b %Y}**; no new cluster has completed since. "
+            "That is normal: the table is sorted by cluster date, not by how recently the app was updated, "
+            "and the SEC takes no filings on US holidays."
+        )
     st.caption(
         f"SEC Form 4 filings from {meta['filings_from']} to {meta['filings_to']}. "
         "A scheduled job rebuilds the list every weekday evening (US time). "
