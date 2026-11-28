@@ -40,3 +40,4 @@
 2026-11-23	filings=641	unreadable=0	skipped=0	purchase_rows=302
 2026-11-24	filings=653	unreadable=0	skipped=0	purchase_rows=225
 2026-11-25	filings=526	unreadable=0	skipped=0	purchase_rows=242
+2026-11-27	filings=250	unreadable=0	skipped=0	purchase_rows=99

@@ -1,8 +1,8 @@
 {
   "source": "SEC quarterly file (1 Jul-30 Sep 2026) plus SEC daily filings (from 1 Oct 2026)",
   "filings_from": "2026-07-01",
-  "filings_to": "2026-11-25",
-  "built_on": "2026-11-27",
+  "filings_to": "2026-11-27",
+  "built_on": "2026-11-28",
   "signals": 198,
   "new_since_oct": 99
 }
